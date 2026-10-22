@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    --font-heading: 'Outfit', system-ui, -apple-system, sans-serif;
+    --font-mono: 'Space Mono', monospace;
+  }
+
+  body {
+    font-family: var(--font-sans);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+  }
+}
+
+/* Custom subtle nautical radar pulse and ripple animations */
+@keyframes compass-spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes wave-flow {
+  0% { background-position-x: 0; }
+  100% { background-position-x: 1000px; }
+}
+
+/* Glassmorphism helpers */
+.glass-panel {
+  background: rgba(15, 23, 42, 0.78);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(56, 189, 248, 0.15);
+}
+
+.glass-panel-elevated {
+  background: rgba(15, 23, 42, 0.90);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(56, 189, 248, 0.28);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+/* High-contrast touch target guarantees */
+.touch-target {
+  min-height: 48px;
+  min-width: 48px;
+}
+
+/* Leaflet dark sea style adjustments */
+.leaflet-container {
+  background-color: #031427 !important;
+  font-family: inherit;
+}
+
+.leaflet-bar a {
+  background-color: #0f172a !important;
+  color: #38bdf8 !important;
+  border-bottom: 1px solid #1e293b !important;
+}
+
+.leaflet-bar a:hover {
+  background-color: #1e293b !important;
+  color: #7dd3fc !important;
+}
+
+/* Hide scrollbar for clean horizontal scrolls */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

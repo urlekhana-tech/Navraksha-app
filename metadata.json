@@ -1,0 +1,12 @@
+{
+  "name": "NavRaksha - Smart Maritime Safety & Fisherman Companion",
+  "description": "Progressive maritime safety, GPS sea navigation, 3-second SOS distress alerts, coastal weather advisories, fish market prices, and voice AI for Indian fishermen.",
+  "requestFramePermissions": [
+    "geolocation",
+    "microphone",
+    "camera"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
